@@ -1,8 +1,8 @@
 from typing import Optional
 import httpx
 
-from magenta.voice import LoginUserRequest, AccessToken, STTRequest, InvokeResult
-from magenta.voice.config import settings
+from . import LoginUserRequest, AccessToken, STTRequest, InvokeResult
+from .config import settings
 
 
 class ApiException(Exception):

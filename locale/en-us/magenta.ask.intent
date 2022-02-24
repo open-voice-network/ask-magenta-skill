@@ -1,6 +1,2 @@
-Ask magenta about the weather
-Have magenta tell me the weather
-Get magenta to give me the weather forecast
-ask magenta for the weather
-ask magenta what is the weather
-ask magenta how is the weather
+ask magenta {utterance}
+ask maggie {utterance}
