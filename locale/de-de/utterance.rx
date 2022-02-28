@@ -1,1 +1,1 @@
-.*(?!(frag|fragen) )(magenta|maggie) (?P<utterance>.+)
+(frag magenta) (?P<utterance>.+)

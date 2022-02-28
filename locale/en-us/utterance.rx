@@ -1,1 +1,1 @@
-.*(ask magenta|ask maggie) (?P<utterance>.+)
+(ask magenta|ask maggie) (?P<utterance>.+)
