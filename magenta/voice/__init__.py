@@ -11,7 +11,7 @@ class LoginUserRequest(BaseModel):
     # External access token. If not set, the login will be treated as an anonymous login
     externalToken: Optional[str] = None
 
-    @validator("userId", always=True)
+    @validator("userId", always=True, allow_reuse=True)
     def generate_random(cls, v):
         # Generate a random user ID to log in anonymously
         return v or str(uuid.uuid4())
@@ -93,7 +93,7 @@ class InvokeResult(BaseModel):
     text: str
     stt: Optional[STTResult]
     sttCandidates: Optional[STTResults]
-    intent: InvokeIntent
+    intent: Optional[InvokeIntent]
     skill: Optional[SkillResult]
     conversationId: str
     cardId: Optional[str]

@@ -1,3 +1,4 @@
+from pathlib import Path
 from pydantic import BaseSettings
 
 
@@ -19,7 +20,7 @@ class Settings(BaseSettings):
     invoke_text: str = "/text"
 
     class Config:
-        env_file = ".env"
+        env_file = Path(__file__).parent / ".env"
 
 
 settings = Settings()
