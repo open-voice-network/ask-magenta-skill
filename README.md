@@ -1,21 +1,36 @@
 # Ask Magenta
 
-Send text to magenta
+Magenta Voice Platform interoperability enabler.
 
 ## About
 
-Send text to magenta for processing
+The skill connects Mycroft speaker to Magenta Voice Platform.  
 
-## Examples
+As Magenta Voice Platform supports German language only, the skill auto-translates user queries from English to German,
+and Platform answers - from German back to English.
 
-German:
+## Usage
 
-* "Magenta wie ist das Wetter in Bonn?"
-* "Magenta wie ist das Wetter?"
+To ask a single question: _**"Hey Mycroft, ask Magenta <question>"**_, e.g: **_"Hey Mycroft, ask Magenta the weather in London"_**  
+
+To activate Magenta: **_"Hey Mycroft, launch Magenta"_**. After the launch, all user queries will be sent to Magenta Platform.
+
+To stop Magenta: **_"Hey Mycroft, terminate Magenta"_**.
 
 ## Configuration
 
-Magenta supports German language only.
+Skill requires the following environment variables to operate:
+
+- **ENVIRONMENT**: Magenta Voice target environment  
+- **TENANT**: Magenta Voice tenant
+- **API_KEY**: API key to connect to the tenant
+- **BASE_URL**: base URL of the Magenta Voice Platform API 
+- **USER_API**: URL path to user management API
+- **INVOKE_TEXT**: URL path to send text API
+- **TESTING_SECRET**: API token encoding secret 
+
+
+## Mycroft STT/TTS in German
 
 Here is the configuration to run STT/TTS in German:
 
@@ -45,7 +60,9 @@ TTS: [Google Speech services](https://cloud.google.com/text-to-speech)
 
 
 ## Credits
-Deborah Dahl
+- Deborah Dahl
+
+- [tvadim](https://github.com/tvadim)
 
 ## Category
 

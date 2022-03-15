@@ -36,6 +36,10 @@ class ApiClient(httpx.Client):
         self.headers["Authorization"] = f"Bearer {self._token}"
         return self
 
+    def disconnect(self) -> "ApiClient":
+        self._token = None
+        return self
+
     def is_connected(self) -> bool:
         return self._token is not None
 
