@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ask-magenta"
-version = "0.1.0"
+version = "0.2.0"
 description = "Ask Magenta skill for Mycroft"
 authors = ["vadim <vadim@axxessio.com>"]
 packages = [
